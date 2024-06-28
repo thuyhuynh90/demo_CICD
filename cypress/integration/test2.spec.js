@@ -1,3 +1,6 @@
 describe('test 2',()=>{
-    console.log('Thuy huynh')
+    it('test',() => {
+        console.log('Thuy huynh')
+    })
+    
 })

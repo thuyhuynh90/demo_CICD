@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import {navigateTo} from '../support/pageObjects/navigationPage'
+import {navigateTo} from '../support/page_objects/navigationPage.js'
 
 describe('First test suite', () => {
 

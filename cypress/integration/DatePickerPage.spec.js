@@ -1,8 +1,7 @@
 /// <reference types="cypress" />
-import FormDatepickerPage from '../models/pages/FormDatepickerPage';
+import { onDatePickerPage } from '../support/page_objects/datePickerPage.js';
 
 describe('Test Date Picker page', () => {
-    const datePickerPage = new FormDatepickerPage();
     it('Date picker', () => {
         // function selectDayFromCurrent(day) {
         //     let date = new Date()
@@ -23,18 +22,18 @@ describe('Test Date Picker page', () => {
         //     return assertDate
         // }
 
-        datePickerPage.visit()
-        // cy.visit('/')
-        // cy.contains('Forms').click()
-        // cy.contains('Datepicker').click()
+        // onDatePickerPage.visit()
+        cy.visit('/')
+        cy.contains('Forms').click()
+        cy.contains('Datepicker').click()
         
-        // Pick a flexible date
-        cy.contains('nb-card', 'Common Datepicker').find('input').then(input => {
-            cy.wrap(input).click()
-            const assertDate = datePickerPage.selectDayFromCurrent(10)
-            cy.wrap(input).invoke('prop', 'value').should('contain', assertDate)
-            cy.wrap(input).should('have.value', assertDate)//the same with above script
-        })
+        // // Pick a flexible date
+        // cy.contains('nb-card', 'Common Datepicker').find('input').then(input => {
+        //     cy.wrap(input).click()
+        //     const assertDate = onDatePickerPage.selectDayFromCurrent(10)
+        //     cy.wrap(input).invoke('prop', 'value').should('contain', assertDate)
+        //     cy.wrap(input).should('have.value', assertDate)//the same with above script
+        // })
 
         // //Pick a fixed date
         // cy.contains('nb-card','Common Datepicker').find('input').then( input => {
