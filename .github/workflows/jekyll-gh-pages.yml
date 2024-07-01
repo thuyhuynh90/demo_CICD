@@ -42,8 +42,8 @@ jobs:
         with:
           image: binbo1990/demo1
           registry: docker.io
-          username: ${{ actions.DOCKER_USERNAME }}
-          password: ${{ actions.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
   # Deployment job
   deploy:
