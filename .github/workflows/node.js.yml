@@ -26,4 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm cypress:test
+    - name: Install Dependencies
+      id: npm-ci
+      run: npm ci
+    - name: Test
+      run: npm run cypress:test
