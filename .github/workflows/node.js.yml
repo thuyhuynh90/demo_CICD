@@ -28,6 +28,6 @@ jobs:
         cache: 'npm'
     - name: Install Dependencies
       id: npm-ci
-      run: npm ci
+      run: npm ci --force
     - name: Test
       run: npm run cypress:test
